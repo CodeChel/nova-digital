@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+
+    <title>Pure</title>
+   
+<link href="main.css" rel="stylesheet"></head>
+
+<body class='main-page'>
+
+    <div class="cursor visually-hidden">
+        <div class="cursor-follow"></div>
+    </div>
+    <video class="video-background" playsinline="" muted="" onplaying="this.controls=false" autoplay loop>
+        <source src="videos/Abstract.webm" type='video/webm'>
+        <source src="videos/Abstract.mp4" type='video/mp4'>
+
+    </video>
+
+    <div class="layer-video"></div>
+    <div class="layer-video-down"></div>
+
+    <header class="header-fixed">
+
+        <a href="#" class='logo'></a>
+        <nav>
+            <div class='burger-menu'>
+                <div class="burger-line first"></div>
+                <div class="burger-line second"></div>
+                <div class="burger-line third"></div>
+                <div class="burger-line fourth"></div>
+            </div>
+            <ul class='nav-menu'>
+                <li><a href="portfolio.html">PORTFOLIO</a></li>
+                <li><a href="shots.html">SHOTS</a></li>
+                <li><a href="price.html">PRICE</a></li>
+                <li><a href="brief.html" class='btn-link'>ЗАПОЛНИТЬ БРИФ</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+
+        <div class="headline-container">
+            <h1 class='main-headline'>DIGITAL PRODUCTION</h1>
+            <h3>Профессиональная разработка решений для вашего бизнеса</h3>
+            <div class='btn-bottom'><a href="brief.html" class='btn-link '>ЗАПОЛНИТЬ БРИФ</a></div>
+        </div>
+        <ul class='site-lang'>
+            <li><a href="#">ENG</a></li>
+            <li><a href="#">RUS</a></li>
+        </ul>
+
+    </main>
+    <footer>
+            <object type="image/svg+xml" data="icons.svg"  >
+                Your  browser does not support SVG 
+              </object>
+        <ul class="social-links">
+
+            <li><a href="#"><span class="visually-hidden">LinkedIn</span>
+                    <svg class="social-links-svg" width="20px" height="20px" viewBox="0 0 57 57">
+                        <use xlink:href="icons.svg#LinkedIn"></use>
+                    </svg>
+                </a></li>
+            <li><a href="#"><span class="visually-hidden">Dribble</span>
+                    <svg class="social-links-svg" width="20px" height="20px">
+                        <use xlink:href="#behance" />
+                    </svg>
+                </a></li>
+            <li><a href="#"><span class="visually-hidden">Behance</span>
+                    <svg class="social-links-svg" width="20px" height="20px">
+                        <use xlink:href="#dribble" />
+                    </svg>
+                </a></li>
+        </ul>
+    </footer>
+   
+<script type="text/javascript" src="main.js"></script></body>
+
+</html>
