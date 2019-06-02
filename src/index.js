@@ -1,6 +1,6 @@
 import "./css/main.css";
 import "./css/normalize.css";
-import symbol from './img/svg-sprites/LinkedIn.svg';
+
 
 function requireAll(r) { r.keys().forEach(r); } //import files
 requireAll(require.context('./img/', true));
