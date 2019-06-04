@@ -6,6 +6,22 @@ function requireAll(r) { r.keys().forEach(r); } //import files
 requireAll(require.context('./img/', true));
 requireAll(require.context('./videos/', true));
 
+var hellopreloader = document.getElementById("hellopreloader_preload");
+if(hellopreloader){
+
+
+function fadeOutnojquery(el) {
+  el.style.opacity = 1;
+  var interhellopreloader = setInterval(function () {
+    el.style.opacity = el.style.opacity - 0.05;
+    if (el.style.opacity <= 0.05) {
+      clearInterval(interhellopreloader);
+      hellopreloader.style.display = "none";
+    }
+  }, 16);
+
+window.onload = function () { fadeOutnojquery(hellopreloader) } };
+}
 
 const SmoothScroll = require('smoothscroll-for-websites');
 SmoothScroll({ stepSize: 30, arrowScroll: 20 });
@@ -16,7 +32,7 @@ const burger = document.querySelector('.burger-menu');
 const header = document.querySelector('header');
 const navMenu = document.querySelector('.nav-menu');
 const siteLang = document.querySelector('.site-lang')
-let timerId = 0; 
+let timerId = 0;
 
 burger.addEventListener('click', () => { // humburger-menu open/close
 
@@ -75,15 +91,15 @@ window.addEventListener('resize', () => {   // remove classes when width > 840px
 });
 
 
-const brief = document.querySelector('.brief-form'); 
-if (brief) {                                                    
-  brief.addEventListener('click', formButtonHandler);   
+const brief = document.querySelector('.brief-form');
+if (brief) {
+  brief.addEventListener('click', formButtonHandler);
   brief.addEventListener('keydown', () => {
     if (event.keyCode == '32') event.target.nextElementSibling.click(); // if checked with keyboard-space
   });
 
-   // input-text focus/blur
-  const briefText = document.querySelectorAll('.brief-text'); 
+  // input-text focus/blur
+  const briefText = document.querySelectorAll('.brief-text');
   for (let index = 0; index < briefText.length; index++) {
     const item = briefText[index];
     item.addEventListener('focus', inputFocus);
@@ -125,7 +141,7 @@ function inputBlur() {
 }
 
 //mouse-custom move
-const cursor = document.querySelector('.cursor'); 
+const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', e => {
 
