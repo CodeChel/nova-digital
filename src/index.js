@@ -8,7 +8,7 @@ requireAll(require.context('./videos/', true));
 
 
 const SmoothScroll = require('smoothscroll-for-websites');
-SmoothScroll({ stepSize: 20, arrowScroll: 20 });
+SmoothScroll({ stepSize: 30, arrowScroll: 20 });
 
 
 
