@@ -15,8 +15,8 @@ SmoothScroll({ stepSize: 30, arrowScroll: 20 });
 document.body.onload = ()=>{
   setTimeout(()=>{
     let preloader = document.getElementById('preloader');
-    if(!preloader.classList.contains('vislually-hiden')){
-      preloader.classList.add('visually-hiden');
+    if(!preloader.classList.contains('vislually-hidden')){
+      preloader.classList.add('visually-hidden');
     }
   }, 500)
 }
