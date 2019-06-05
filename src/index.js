@@ -6,27 +6,20 @@ function requireAll(r) { r.keys().forEach(r); } //import files
 requireAll(require.context('./img/', true));
 requireAll(require.context('./videos/', true));
 
-var hellopreloader = document.getElementById("hellopreloader_preload");
-if(hellopreloader){
-
-
-function fadeOutnojquery(el) {
-  el.style.opacity = 1;
-  var interhellopreloader = setInterval(function () {
-    el.style.opacity = el.style.opacity - 0.05;
-    if (el.style.opacity <= 0.05) {
-      clearInterval(interhellopreloader);
-      hellopreloader.style.display = "none";
-    }
-  }, 16);
-
-window.onload = function () { fadeOutnojquery(hellopreloader) } };
-}
 
 const SmoothScroll = require('smoothscroll-for-websites');
 SmoothScroll({ stepSize: 30, arrowScroll: 20 });
 
 
+
+document.body.onload = ()=>{
+  setTimeout(()=>{
+    let preloader = document.getElementById('preloader');
+    if(!preloader.classList.contains('vislually-hiden')){
+      preloader.classList.add('visually-hiden');
+    }
+  }, 500)
+}
 
 const burger = document.querySelector('.burger-menu');
 const header = document.querySelector('header');
