@@ -31,8 +31,7 @@ burger.addEventListener('click', () => { // humburger-menu open/close
 
   if (timerId == 0) {
 
-    burger.lastElementChild.classList.toggle('visually-hidden');
-    burger.firstElementChild.classList.toggle('visually-hidden');
+    
     if (navMenu.classList.contains('flex-show')) {
       navMenu.classList.add('flex-hide');
       navMenu.classList.remove('flex-show');
@@ -59,8 +58,8 @@ burger.addEventListener('click', () => { // humburger-menu open/close
     }
 
 
-    burger.firstElementChild.nextElementSibling.classList.toggle('burger-rotate-1'); //rotate burger-lines
-    burger.lastElementChild.previousElementSibling.classList.toggle('burger-rotate-2');
+    burger.firstElementChild.classList.toggle('burger-rotate-1'); //rotate burger-lines
+    burger.lastElementChild.classList.toggle('burger-rotate-2');
 
   }
 })
@@ -150,7 +149,7 @@ document.addEventListener('mouseleave', () => {
 // mouse-custom focus
 
 
-let elements = document.querySelectorAll('a, .btn-brief,input[type=submit],.shot-container img, .cross-close, #widgethelp_uniquecssid'),
+let elements = document.querySelectorAll('a, .btn-brief,input[type=submit],.shot-container img, .cross-close, #widgethelp_uniquecssid, .burger-menu'),
   cursorFollow = document.querySelector('.cursor-follow'),
   index, item;
 
