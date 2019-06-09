@@ -653,40 +653,8 @@ span .agreement-link{
   color: rgba(255,255,255,.7);
  
 }
-.site-lang{
-  list-style-type: none;
-  position: fixed;
-  font-size: 14px;
-  font-weight: 600;
-
-  z-index: 10;
-
-  top: 50%;
- 
-  
- 
-    top: 85%;
-
-    bottom: 35px;
-    right: 50%;
-    transform: translate(50%, 0);
-    display: flex;
-    justify-content: space-between;
-    width: 80px;
-    padding: 0;
-    display: none;
-
-}
-.site-lang > li {
-  margin-bottom: 25px;
-}
-.site-lang li:hover a,
-.nav-menu a:hover:not(.btn-link){
-  color:  #5081FF    !important;
 
 
-  transition: .3s;
-}
 
 .social-links{
 	list-style-type: none;
@@ -729,7 +697,7 @@ span .agreement-link{
   
   margin-top: 150px;
   margin-left: 220px;
-  margin-right: 200px;
+  margin-right: 600px;
   margin-bottom: 53px;
 
   padding: 0;
@@ -755,7 +723,7 @@ span .agreement-link{
   margin: 0;
   
   position: absolute; 
-  top: 450px;
+  top: 480px;
   right: -160px;
 
   font-size: 10.5em;
@@ -768,8 +736,8 @@ span .agreement-link{
 }
 .bg-headline-shot{
   font-size: 11em;
-  top: 300px;
-  right: 100px;
+  top: 240px;
+  right: 25px;
 }
 .price{
   display: flex;
@@ -882,7 +850,7 @@ span .agreement-link{
 
 }
 .price-list span{
-  font-size: 15px;
+  font-size: 14px;
   opacity: .7;
   
 }
@@ -925,7 +893,7 @@ span .agreement-link{
 
   overflow: hidden;
   
-  margin-left: 200px;
+  margin-left: 220px;
   margin-right: 600px;
   margin-bottom: 100px;
 }
@@ -980,7 +948,7 @@ span .agreement-link{
 .work-description{
   position: fixed;
   top: 150px;
-  right: 250px;
+  right: 175px;
   animation: showWorkDescr 1s;
 }
 @keyframes showWorkDescr{
@@ -991,7 +959,7 @@ span .agreement-link{
   }
   100%{
     top: 150px;
-    right: 250px;
+    right: 175px;
   }
 }
 .work-description dt{
@@ -1005,6 +973,7 @@ span .agreement-link{
   margin-bottom: 40px;
   font-weight: 700;
   max-width: 288px;
+  color: #fff;
 }
 .work-description dd:last-of-type{
   font-size: 14px;
@@ -1044,11 +1013,16 @@ span .agreement-link{
   margin-bottom: 10px;
 }
 
-.portfolio-container,
-.shot-container{
-  margin-left: 150px;
+.portfolio-container{
+  margin-left: 230px;
+  margin-right: 545px;
   margin-top: 150px;
-  margin-right: 600px;
+  margin-bottom: 30px;
+}
+.shot-container{
+  margin-left: 220px;
+  margin-top: 150px;
+  margin-right: 500px;
   margin-bottom: 30px;
   
   color: #fff;
@@ -1194,6 +1168,15 @@ span .agreement-link{
   }
 }
 @media only screen and (max-width: 1620px){
+  .brief-page .bg-headline{
+    right: -210px;
+  }
+  .logo:before{
+    left: 40px;
+  }
+  .burger-menu{
+    right: 40px;
+  }
   .work-description{
     right: 160px;
     animation: showWorkDescr 1s;
@@ -1219,11 +1202,25 @@ span .agreement-link{
   .header-price .nav-menu li{
     margin-left: 20px;
   }
+  .bg-headline{
+    right: -350px;
+  }
+  .bg-headline-shot{
+    right: -100px;
+  }
+
+  .container-work{
+    margin-right: 350px;
+    margin-left: 180px;
+  }
+  .portfolio-container
+  {
+    margin-right: 495px;
+    margin-left: 180px;
+  }
   .price-list,
-  .container-work,
-  .portfolio-container,
   .shot-container{
-    margin-right: 200px;
+    margin-right: 300px;
   }
   .btn-link{
     margin-left: 0;
@@ -1258,9 +1255,7 @@ span .agreement-link{
       right: 115px;
     }
   }
-  .nav-menu li{
-    font-size: 12px;
-  }
+ 
   .type-service h3{
     font-size: 24px;
   }
@@ -1274,16 +1269,22 @@ span .agreement-link{
     font-size: 18px;
   }
   .price-list,
-  .container-work,
-  .portfolio-container,
-  .shot-container{
-    margin-right: 220px;
+  .container-work{
+    margin-right: 300px;
   }
+  .portfolio-container {
+    margin-right: 425px;
+}
   .bg-headline{
-    right: -220px;
+    right: -360px;
   }
   .bg-headline-shot{
-    right: -50px;
+    right: -55px;
+    font-size: 8em;
+    top: 200px;
+  }
+  .shot-container{
+    margin-right: 250px;
   }
   
 }
@@ -1312,11 +1313,15 @@ span .agreement-link{
 
   .price-list,
   .container-work,
-  .portfolio-container,
+  .portfolio-container{
+    margin-right: 100px;
+    margin-left: 150px;
+    
+  }
+  
   .shot-container{
     margin-right: 100px;
-    margin-left: 220px;
-    
+    margin-left: 150px;
   }
   .container-work:first-of-type{
     margin-top: 80px;
@@ -1349,10 +1354,7 @@ span .agreement-link{
     top: 0;
     left: 0;
   }
-  .site-lang{
-    opacity: 0;
-    z-index: 10;
-  }
+
   
 
  

@@ -24,7 +24,7 @@ document.body.onload = ()=>{
 const burger = document.querySelector('.burger-menu');
 const header = document.querySelector('header');
 const navMenu = document.querySelector('.nav-menu');
-const siteLang = document.querySelector('.site-lang')
+
 let timerId = 0;
 
 burger.addEventListener('click', () => { // humburger-menu open/close
@@ -35,12 +35,11 @@ burger.addEventListener('click', () => { // humburger-menu open/close
     if (navMenu.classList.contains('flex-show')) {
       navMenu.classList.add('flex-hide');
       navMenu.classList.remove('flex-show');
-      siteLang.classList.add('flex-hide');
-      siteLang.classList.remove('flex-show');
+
 
 
       timerId = setTimeout(() => { //remove classes after 500ms
-        siteLang.classList.remove('flex-hide');
+  
         navMenu.classList.remove('flex-hide');
         header.classList.remove('header-full');
         document.body.style.overflow = '';
@@ -52,7 +51,7 @@ burger.addEventListener('click', () => { // humburger-menu open/close
     }
     else {
       document.body.style.overflow = 'hidden';
-      siteLang.classList.add('flex-show');
+      
       navMenu.classList.add('flex-show');
       header.classList.toggle('header-full');
     }
@@ -68,14 +67,12 @@ burger.addEventListener('click', () => { // humburger-menu open/close
 window.addEventListener('resize', () => {   // remove classes when width > 840px
   if (document.documentElement.clientWidth > 840) {
     header.classList.remove('visually-hidden');
-    burger.firstElementChild.nextElementSibling.classList.remove('burger-rotate-1');
-    burger.lastElementChild.previousElementSibling.classList.remove('burger-rotate-2');
+    burger.firstElementChild.classList.remove('burger-rotate-1');
+    burger.lastElementChild.classList.remove('burger-rotate-2');
 
-    burger.lastElementChild.classList.remove('visually-hidden');
-    burger.firstElementChild.classList.remove('visually-hidden');
     header.classList.remove('header-full');
     navMenu.classList.remove('flex-show');
-    siteLang.classList.remove('flex-show');
+   
     timerId = 0;
     document.body.style.overflow = '';
 
