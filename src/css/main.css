@@ -1168,6 +1168,9 @@ span .agreement-link{
   }
 }
 @media only screen and (max-width: 1620px){
+  .social-links{
+    left: 45px;
+  }
   .brief-page .bg-headline{
     right: -210px;
   }
