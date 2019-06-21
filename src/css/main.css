@@ -1675,9 +1675,7 @@ span .agreement-link{
     margin-top: 15px;
   }
 
-  .nav-menu{
-    margin-top: 60px;
-  }
+  
 }
 
 @media only screen and (max-height: 440px)  {
@@ -1691,9 +1689,7 @@ span .agreement-link{
   .nav-menu a{
     font-size: 22px;
   }
-  .nav-menu{
-    margin-top: 0px;
-  }
+  
   .nav-menu li{
     margin-top: 25px;
   }
