@@ -67,6 +67,9 @@ body {
   margin: 0;
   padding: 0;
 }
+html{
+  overflow-x: hidden;
+}
 .main-page{
   overflow: hidden;
   background-color: #000000;
@@ -183,7 +186,13 @@ animation-delay: -0.8s;
 }
 .contacts{
   margin-top: 115px;
+  margin-bottom: 120px;
+
   animation: showBlock 1s linear forwards;
+  border-spacing: 0;
+}
+.contacts td{
+  padding-top: 10px;
 }
 .contacts-header{
   font-family: Gilroy;
@@ -356,7 +365,7 @@ animation-delay: -0.8s;
 .header-full::after{
   content: 'Made your business better !';
   position: absolute;
-  left: 260px;
+  left: 247px;
   top: 65px;
 
   font-size: 14px;
@@ -411,7 +420,7 @@ header ul li{
   margin-left: auto;
 }
 .nav-menu li:first-of-type{
-  margin-left: 0;
+  margin-left: 0 !important;
 }
 nav .btn-link-question{
   background-color: #EDEDF1;
@@ -1308,9 +1317,6 @@ span .agreement-link{
     font-size: 18px;
   }
  
-  .header-price .nav-menu li{
-    margin-left: 20px;
-  }
   .bg-headline{
     right: -350px;
   }
