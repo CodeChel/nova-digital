@@ -23,29 +23,17 @@ module.exports = {
     module: {
         rules: [
 
-            {
-                test: /\.css$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                      
-                    },
-                    'css-loader',
-                    
-                    
-                ]
 
-            },
             {
                 test: /\.svg$/, // your icons directory
                 include: path.resolve(__dirname, 'src/img/svg-sprites'),
                 loader: 'svg-sprite-loader',
                 options: {
-                  extract: true,
-                  spriteFilename: 'icons.svg', // this is the destination of your sprite sheet
-                  runtimeCompat: true
+                    extract: true,
+                    spriteFilename: 'icons.svg', // this is the destination of your sprite sheet
+                    runtimeCompat: true
                 }
-              },
+            },
             {
                 test: /\.(jpg|png|svg)$/,
                 exclude: /svg-sprites/,
@@ -57,20 +45,8 @@ module.exports = {
                             outputPath: 'img/',
                             useRelativePath: true
                         }
-                    },
-                    {
-                        loader: 'image-webpack-loader',
-                        options: {
-                            mozjpeg: {
-                                progressive: true,
-                                quality: 70
-                            },
-                            pngquant: {
-                                quality: '75-80',
-                                speed: 4
-                            }
-                        }
                     }
+
                 ]
             },
             {
@@ -90,20 +66,24 @@ module.exports = {
                 ]
 
             },
+
             {
-                test: /\.js$/,
+                test: /\.css$/,
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
 
-                exclude: /node_modules/,
-                loader: 'babel-loader',
-
-                options: {
-                    presets: ['@babel/preset-env']
-                }
+                    },
+                    'css-loader',
+                ]
             }
-            
+
         ]
     },
     plugins: [
+        new SpriteLoaderPlugin({
+            plainSprite: true
+        }),
         // Use .map() on the array of file names to map each file name
         // to the plugin instance, then spread the mapped array into
         // the plugins array.
@@ -111,15 +91,14 @@ module.exports = {
             template: 'src/' + page,
             filename: page
         })),
-        new MiniCssExtractPlugin({
-            filename: '[name].css'
-        }
-        ),
+
         new CleanWebpackPlugin({
             path: './dist/*.*'
         }),
-        new SpriteLoaderPlugin({
-            plainSprite: true
-          })
+
+        new MiniCssExtractPlugin({
+            filename: '[name].css'
+        }
+        )
     ]
 }
